@@ -10,6 +10,7 @@ public class BezahlWerkzeug
 
     public static void main(String[] args)
     {
+        // TODO: Nur zum Debuggen? -> Entfernen
         BezahlWerkzeug a = new BezahlWerkzeug();
         System.out
             .println(a.berechne(21000, "König der Löwen", "26.06.2016", 42));
