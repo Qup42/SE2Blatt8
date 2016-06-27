@@ -18,13 +18,13 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Platz;
 /**
  * Widget, das die Plätze in einem Kinosaal grafisch darstellt und es
  * ermöglicht, Plätze für den Verkauf auszuwählen.
- *
+ * 
  * Hierfür wurde ein eigenes Widget entwickelt, damit das Werkzeug nur einen
  * Listener für ein spezielles Auswahl-Event registrieren muss, statt an jedem
  * einzelnen Button einen ActionListener registrieren zu müssen. Dieses Widget
  * kapselt also die Abbildung der Events der einzelnen Buttons auf ein
  * Auswahl-Event.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -87,7 +87,7 @@ class JPlatzplan extends JComponent
     /**
      * Fügt einen Listener hinzu, der bei Änderungen der Auswahl benachrichtigt
      * wird.
-     *
+     * 
      * @param listener
      *            der Listener.
      */
@@ -98,7 +98,7 @@ class JPlatzplan extends JComponent
 
     /**
      * Entfernt einen Listener.
-     *
+     * 
      * @param listener
      *            der Listener.
      */
@@ -109,7 +109,7 @@ class JPlatzplan extends JComponent
 
     /**
      * Benachrichtigt die SelectionListener, dass sich die Auswahl geändert hat.
-     *
+     * 
      * @param ausgewaehltePlaetze
      *            die neue Auswahl.
      */
@@ -127,12 +127,12 @@ class JPlatzplan extends JComponent
      * Setzt die Anzahl der Plätze, die in diesem Platzplan zur Auswahl
      * angeboten werden. Achtung, nach dem Aufruf dieser Methode werden zunächst
      * alle Plätze als frei angezeigt!
-     *
+     * 
      * @param anzahlReihen
      *            die Anzahl der Reihen
      * @param anzahlSitzeProReihe
      *            die Anzahl der Plätze pro Reihe
-     *
+     * 
      * @require anzahlReihen >= 0
      * @require anzahlSitzeProReihe >= 0
      */
@@ -170,7 +170,7 @@ class JPlatzplan extends JComponent
 
     /**
      * Fügt ein GUI-Element in das Darstellungsgitter ein.
-     *
+     * 
      * @param component
      *            Das GUI-Element, das eingefügt werden soll.
      * @param gridx
@@ -187,7 +187,7 @@ class JPlatzplan extends JComponent
 
     /**
      * Gibt die Menge der ausgewählten Plätze zurück.
-     *
+     * 
      * @ensure result != null
      */
     public Set<Platz> getAusgewaehltePlaetze()
@@ -210,10 +210,10 @@ class JPlatzplan extends JComponent
 
     /**
      * Markiert den angegebenen Platz als verkauft.
-     *
+     * 
      * @param platz
      *            der Platz.
-     *
+     * 
      * @require platz != null
      */
     public void markierePlatzAlsVerkauft(Platz platz)
@@ -225,10 +225,10 @@ class JPlatzplan extends JComponent
 
     /**
      * Markiert den angegebenen Platz als frei.
-     *
+     * 
      * @param platz
      *            der Platz.
-     *
+     * 
      * @require platz != null
      */
     public void markierePlatzAlsFrei(Platz platz)

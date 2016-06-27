@@ -13,7 +13,7 @@ import javax.swing.SwingConstants;
 
 /**
  * Die GUI des {@link DatumAuswaehlWerkzeug}.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -26,7 +26,7 @@ class DatumAuswaehlWerkzeugUI
 
     /**
      * Initialisiert die Benutzeroberfläche.
-     *
+     * 
      * @param startDatumString der String, der zu Anfang als ausgewähltes Datum
      *            angezeigt wird.
      */

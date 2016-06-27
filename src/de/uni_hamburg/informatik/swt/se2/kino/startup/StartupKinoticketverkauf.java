@@ -13,7 +13,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.werkzeuge.kasse.KassenWerkzeug;
 
 /**
  * Startet die Anwendung.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -22,7 +22,7 @@ public class StartupKinoticketverkauf
     /**
      * Die Main-Methode prüft, ob Assertions aktiviert sind und startet das
      * KassenWerkzeug mit einem Default-Kino.
-     *
+     * 
      * @param args Aufrufparameter werden ignoriert.
      */
     public static void main(String[] args)
@@ -124,7 +124,7 @@ public class StartupKinoticketverkauf
     }
 
     /**
-     *
+     * 
      * @return true, wenn asserts enabled sind, ansonsten false.
      */
     private static boolean assertsEnabled()

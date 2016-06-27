@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 
 /**
  * Das UI des {@link KassenWerkzeug}.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -78,7 +78,7 @@ class KassenWerkzeugUI
     /**
      * Erzeugt das Panel, in dem das Datum, der Kinosaal und die Vorstellung
      * ausgewählt werden.
-     *
+     * 
      * Als Parameter werden mehrere Panel übergeben, diese werden in das hier
      * erzeugte VorstellungsauswahlPanel eingebettet.
      */

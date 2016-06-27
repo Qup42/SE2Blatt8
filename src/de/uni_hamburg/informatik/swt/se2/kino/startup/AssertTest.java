@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Diese Klasse dient dazu, zu testen, ob in Eclipse die Assertions aktiviert
  * sind.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -25,7 +25,7 @@ public class AssertTest
             fail("Asserts müssen aktiviert sein -ea");
             /*
              * Anleitung:
-             *
+             * 
              * Window > Preferences > Java > Installed JREs -> ausgewählte JRE
              * markieren und auf "Edit" klicken > im erscheinenden Dialog bei
              * "Default VM Arguments" -ea eingeben

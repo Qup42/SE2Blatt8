@@ -3,7 +3,7 @@ package de.uni_hamburg.informatik.swt.se2.kino.fachwerte;
 /**
  * Eine Sitzplatzangabe in einem Kinosaal. Der Platz setzt sich zusammen aus der
  * Reihe und dem Sitz in dieser Reihe.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -14,12 +14,12 @@ public final class Platz
 
     /**
      * Wählt einen Platz aus.
-     *
+     * 
      * @param reihe
      *            die Sitzreihe.
      * @param sitz
      *            die Nummer des Sitzes in seiner Sitzreihe.
-     *
+     * 
      * @require reihe >= 0
      * @require sitz >= 0
      */

@@ -16,7 +16,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.werkzeuge.vorstellungsauswaehler.V
  * Das Kassenwerkzeug. Mit diesem Werkzeug kann die Benutzerin oder der Benutzer
  * eine Vorstellung auswählen und Karten für diese Vorstellung verkaufen und
  * stornieren.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -35,9 +35,9 @@ public class KassenWerkzeug
 
     /**
      * Initialisiert das Kassenwerkzeug.
-     *
+     * 
      * @param kino das Kino, mit dem das Werkzeug arbeitet.
-     *
+     * 
      * @require kino != null
      */
     public KassenWerkzeug(Kino kino)

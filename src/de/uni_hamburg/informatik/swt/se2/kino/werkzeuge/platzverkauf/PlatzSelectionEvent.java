@@ -11,7 +11,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Platz;
  * Event wird von einem {@link JPlatzplan} ausgelöst, wenn der Benutzer in dem
  * Platzplan Plätze auswählt. Das Event enthält die Menge der Plätze, die jetzt
  * ausgewählt sind.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -21,7 +21,7 @@ class PlatzSelectionEvent extends EventObject
 
     /**
      * Erstellt ein neues PlatzSelectionEvent.
-     *
+     * 
      * @param source
      *            Das Objekt, von dem das Ereignis ausgelöst wurde.
      * @param ausgewaehltePlaetze
@@ -32,7 +32,7 @@ class PlatzSelectionEvent extends EventObject
         super(source);
         _ausgewaehltePlaetze = new HashSet<Platz>(ausgewaehltePlaetze);
     }
-
+    
     /**
      * Gibt die Menge der nach diesem Ereignis ausgewählten Plätze zurück.
      */
@@ -40,7 +40,7 @@ class PlatzSelectionEvent extends EventObject
     {
         return _ausgewaehltePlaetze;
     }
-
+    
     @Override
     public String toString()
     {

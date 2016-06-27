@@ -5,7 +5,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.FSK;
 /**
  * Ein Film. Ein Film besteht aus einem Titel, einer Länge in Minuten, einer
  * Altersfreigabe und einer Angabe darueber, ob der Film Überlänge hat.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -18,7 +18,7 @@ public class Film
 
     /**
      * Initialisiert einen neuen Film.
-     *
+     * 
      * @param titel
      *            der Titel.
      * @param laenge
@@ -27,11 +27,11 @@ public class Film
      *            die Altersfreigabe fuer diesen Film.
      * @param ueberlaenge
      *            hat der Film Überlaenge?
-     *
+     * 
      * @require titel != null
      * @require laenge > 0
      * @require fsk != null
-     *
+     * 
      * @ensure getTitel() == titel
      * @ensure getLaenge() == laenge
      * @ensure getFSK() == fsk
@@ -51,7 +51,7 @@ public class Film
 
     /**
      * Gibt den Titel dieses Films zurück.
-     *
+     * 
      * @ensure result != null
      */
     public String getTitel()
@@ -69,7 +69,7 @@ public class Film
 
     /**
      * Gibt die Altersfreigabe fuer diesen Film zurück.
-     *
+     * 
      * @ensure result != null
      */
     public FSK getFSK()

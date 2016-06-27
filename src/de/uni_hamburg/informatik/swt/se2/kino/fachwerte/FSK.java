@@ -2,7 +2,7 @@ package de.uni_hamburg.informatik.swt.se2.kino.fachwerte;
 
 /**
  * Die Altersfreigaben der FSK.
- *
+ * 
  * @author SE2-Team
  * @version April 2010.
  */

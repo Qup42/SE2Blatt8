@@ -4,7 +4,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.materialien.Vorstellung;
 
 /**
  * Formatierer für eine {@link Vorstellung}.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -14,7 +14,7 @@ class VorstellungsFormatierer
 
     /**
      * Initialisiert einen Formatierer für die angegebene Vorstellung.
-     *
+     * 
      * @param vorstellung
      *            die Vorstellung, die von diesem Formatierer dargestellt wird.
      */

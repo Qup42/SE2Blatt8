@@ -16,7 +16,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Platz;
  * Ein Button, mit dem ein Sitzplatz in der Benutzeroberfläche dargestellt wird.
  * Der Sitzplatz kann ausgewählt und als frei oder als verkauft gekennzeichnet
  * werden.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -38,10 +38,10 @@ class JPlatzButton extends JButton
     /**
      * Erzeugt einen neuen Button. Der Button wird mit der Nummer des Sitzes in
      * seiner Sitzreihe beschriftet.
-     *
+     * 
      * @param platz
      *            der Platz, auf den sich dieser Button bezieht.
-     *
+     * 
      * @require platz != null
      */
     public JPlatzButton(Platz platz)
@@ -143,7 +143,7 @@ class JPlatzButton extends JButton
      * Kennzeichnet den Sitzplatz, den dieser Button anzeigt, als verkauft oder
      * frei. Nach Aufruf dieser Methode wird der Button nicht mehr als
      * ausgewählt angezeigt.
-     *
+     * 
      * @param verkauft
      *            <code>true</code>, wenn der Sitzplatz als verkauft
      *            gekennzeichnet werden soll, <code>false</code>, wenn er als
@@ -157,7 +157,7 @@ class JPlatzButton extends JButton
 
     /**
      * Zeigt diesen Button als ausgewählt oder nicht ausgewählt an.
-     *
+     * 
      * @param ausgewaehlt
      *            <code>true</code>, wenn der Button als ausgewählt angezeigt
      *            werden soll, <code>false</code> sonst.

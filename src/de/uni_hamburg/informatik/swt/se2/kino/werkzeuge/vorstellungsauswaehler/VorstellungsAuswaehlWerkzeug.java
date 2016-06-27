@@ -13,7 +13,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.werkzeuge.ObservableSubwerkzeug;
 /**
  * Mit diesem Werkzeug kann der Benutzer oder die Benutzerin eine Vorstellung
  * aus einem Tagesplan auswählen.
- *
+ * 
  * Dieses Werkzeug ist ein eingebettetes Subwerkzeug. Es benachrichtigt seine
  * Beobachter, wenn sich die ausgewählte Vorstellung geändert hat.
  */
@@ -44,7 +44,7 @@ public class VorstellungsAuswaehlWerkzeug extends ObservableSubwerkzeug
     /**
      * Gibt das Panel dieses Subwerkzeugs zurück. Das Panel sollte von einem
      * Kontextwerkzeug eingebettet werden.
-     *
+     * 
      * @ensure result != null
      */
     public JPanel getUIPanel()
@@ -54,7 +54,7 @@ public class VorstellungsAuswaehlWerkzeug extends ObservableSubwerkzeug
 
     /**
      * Gibt die derzeit ausgewählte Vorstellung zurück.
-     *
+     * 
      * @return die derzeitig ausgewählte Vorstellung, oder null, wenn keine
      *         Vorstellung ausgewählt ist.
      */
@@ -73,7 +73,7 @@ public class VorstellungsAuswaehlWerkzeug extends ObservableSubwerkzeug
 
     /**
      * Setzt den Tagesplan, dessen Vorstellungen zur Auswahl angeboten werden.
-     *
+     * 
      * @require tagesplan != null
      */
     public void setTagesplan(Tagesplan tagesplan)
@@ -102,7 +102,7 @@ public class VorstellungsAuswaehlWerkzeug extends ObservableSubwerkzeug
     }
 
     /**
-     *
+     * 
      * Verbindet die fachlichen Aktionen mit den Interaktionselementen der
      * graphischen Benutzungsoberfläche.
      */

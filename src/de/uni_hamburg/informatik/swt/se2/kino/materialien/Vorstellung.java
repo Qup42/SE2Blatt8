@@ -11,7 +11,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Uhrzeit;
  * Vorstellung speichert zum einen die Daten der eigentlichen Vorstellung (wann
  * und wo läuft welcher Film) und zum anderen, welche Plätze für diese
  * Vorstellung bereits verkauft wurden.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -28,21 +28,21 @@ public class Vorstellung
 
     /**
      * Erstellt eine neue Vorstellung.
-     *
+     * 
      * @param kinosaal der Kinosaal, in dem die Vorstellung laeuft.
      * @param film der Film, der in dieser Vorstellung gezeigt wird.
      * @param anfangszeit die Anfangszeit der Vorstellung.
      * @param endzeit die Endzeit der Vorstellung.
      * @param preis der Verkaufspreis in Eurocent für Karten zu dieser
      *            Vorstellung.
-     *
+     * 
      * @require kinosaal != null
      * @require film != null
      * @require anfangszeit != null
      * @require endzeit != null
      * @require datum != null
      * @require preis > 0
-     *
+     * 
      * @ensure getKinosaal() == kinosaal
      * @ensure getFilm() == film
      * @ensure getAnfangszeit() == anfangszeit
@@ -73,7 +73,7 @@ public class Vorstellung
 
     /**
      * Gibt den Kinosaal zurück, in dem diese Vorstellung läuft.
-     *
+     * 
      * @ensure result != null
      */
     public Kinosaal getKinosaal()
@@ -83,7 +83,7 @@ public class Vorstellung
 
     /**
      * Gibt den Film zurück, der in dieser Vorstellung gezeigt wird.
-     *
+     * 
      * @ensure result != null
      */
     public Film getFilm()
@@ -93,7 +93,7 @@ public class Vorstellung
 
     /**
      * Gibt die Uhrzeit zurück, zu der diese Vorstellung beginnt.
-     *
+     * 
      * @ensure result != null
      */
     public Uhrzeit getAnfangszeit()
@@ -103,7 +103,7 @@ public class Vorstellung
 
     /**
      * Gibt die Uhrzeit zurück, zu der diese Vorstellung endet.
-     *
+     * 
      * @ensure result != null
      */
     public Uhrzeit getEndzeit()
@@ -113,7 +113,7 @@ public class Vorstellung
 
     /**
      * Gibt das Datum zurück, an dem diese Vorstellung läuft.
-     *
+     * 
      * @ensure result != null
      */
     public Datum getDatum()
@@ -124,7 +124,7 @@ public class Vorstellung
     /**
      * Gibt den Verkaufspreis in Eurocent für Karten zu dieser Vorstellung
      * zurück.
-     *
+     * 
      */
     public int getPreis()
     {
@@ -141,12 +141,12 @@ public class Vorstellung
 
     /**
      * Prüft, ob der angegebene Sitzplatz in dieser Vorstellung vorhanden ist.
-     *
+     * 
      * @param platz der Sitzplatz.
-     *
+     * 
      * @return <code>true</code>, falls der Platz existiert, <code>false</code>
      *         sonst.
-     *
+     * 
      * @require platz != null
      */
     public boolean hatPlatz(Platz platz)
@@ -159,11 +159,11 @@ public class Vorstellung
     /**
      * Prüft, ob alle angegebenen Sitzplätze in dieser Vorstellung vorhanden
      * sind.
-     *
+     * 
      * @param plaetze die Sitzplätze.
-     *
+     * 
      * @return true, falls alle Plätze existieren, false sonst.
-     *
+     * 
      * @require plaetze != null
      */
     public boolean hatPlaetze(Set<Platz> plaetze)
@@ -180,11 +180,11 @@ public class Vorstellung
 
     /**
      * Gibt den Gesamtpreis für die angegebenen Plätze zurücke
-     *
+     * 
      * @param plaetze die Sitzplätze.
-     *
+     * 
      * @return Gesamtpreis in Eurocent
-     *
+     * 
      * @require hatPlaetze(plaetze)
      */
     public int getPreisFuerPlaetze(Set<Platz> plaetze)
@@ -196,11 +196,11 @@ public class Vorstellung
 
     /**
      * Verkauft einen Platz.
-     *
+     * 
      * @param platz der Sitzplatz.
-     *
+     * 
      * @require istVerkaufbar(platz)
-     *
+     * 
      * @ensure !istVerkaufbar(platz)
      * @ensure istStornierbar(platz)
      */
@@ -214,9 +214,9 @@ public class Vorstellung
 
     /**
      * Verkauft die gegebenen Plätze.
-     *
+     * 
      * @require sindVerkaufbar(plaetze)
-     *
+     * 
      * @ensure !sindVerkaufbar(plaetze)
      * @ensure sindStornierbar(plaetze)
      */
@@ -233,9 +233,9 @@ public class Vorstellung
     /**
      * Prüft, ob ein gegebener Platz verkauft werden kann. Dafür wird geschaut,
      * ob der gegebene Platz bisher verkauft ist.
-     *
+     * 
      * @return true, wenn ein Plätze verkaufbar ist, sonst false.
-     *
+     * 
      * @require hatPlatz(platz)
      */
     public boolean istVerkaufbar(Platz platz)
@@ -248,9 +248,9 @@ public class Vorstellung
     /**
      * Prüft, ob gegebene Plätze alle verkauft werden können. Dafür wird
      * geschaut, ob keiner der gegebenen Plätze bisher verkauft ist.
-     *
+     * 
      * @return true, wenn alle Plätze verkaufbar sind, sonst false.
-     *
+     * 
      * @require hatPlaetze(plaetze)
      */
     public boolean sindVerkaufbar(Set<Platz> plaetze)
@@ -268,11 +268,11 @@ public class Vorstellung
 
     /**
      * Storniert einen Platz.
-     *
+     * 
      * @param platz der Sitzplatz.
-     *
+     * 
      * @require istStornierbar(platz)
-     *
+     * 
      * @ensure !istStornierbar(platz)
      * @ensure istVerkaufbar(platz)
      */
@@ -286,9 +286,9 @@ public class Vorstellung
 
     /**
      * Storniert die gegebenen Plätze.
-     *
+     * 
      * @require sindStornierbar(plaetze)
-     *
+     * 
      * @ensure !sindStornierbar(plaetze)
      * @ensure sindVerkaufbar(plaetze)
      */
@@ -305,9 +305,9 @@ public class Vorstellung
     /**
      * Prüft, ob ein gegebener Platz stornierbar ist. Dafür wird geschaut, ob
      * ein gegebener Platz verkauft ist.
-     *
+     * 
      * @return true, wenn ein Platz stornierbar ist, sonst false.
-     *
+     * 
      * @require hatPlaetze(plaetze)
      */
     public boolean istStornierbar(Platz platz)
@@ -320,9 +320,9 @@ public class Vorstellung
     /**
      * Prüft, ob die gegebenen Plätze alle stornierbar sind. Dafür wird
      * geschaut, ob jeder gegebene Platz verkauft ist.
-     *
+     * 
      * @return true, wenn alle Plätze stornierbar sind, sonst false.
-     *
+     * 
      * @require hatPlaetze(plaetze)
      */
     public boolean sindStornierbar(Set<Platz> plaetze)
@@ -345,11 +345,11 @@ public class Vorstellung
 
     /**
      * Gibt an, ob ein bestimmter Platz bereits verkauft ist.
-     *
+     * 
      * @param platz der Sitzplatz.
-     *
+     * 
      * @return true, falls der Platz verkauft ist, false sonst.
-     *
+     * 
      * @require hatPlatz(platz)
      */
     private boolean istPlatzVerkauft(Platz platz)

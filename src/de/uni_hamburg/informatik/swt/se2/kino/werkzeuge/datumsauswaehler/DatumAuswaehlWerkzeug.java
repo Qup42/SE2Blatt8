@@ -10,10 +10,10 @@ import de.uni_hamburg.informatik.swt.se2.kino.werkzeuge.ObservableSubwerkzeug;
 
 /**
  * Mit diesem Werkzeug kann ein Datum ausgewählt werden.
- *
+ * 
  * Dieses Werkzeug ist ein eingebettetes Subwerkzeug. Es benachrichtigt sein
  * Kontextwerkzeug, wenn sich das ausgewählte Datum geändert hat.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -59,7 +59,7 @@ public class DatumAuswaehlWerkzeug extends ObservableSubwerkzeug
     /**
      * Gibt das Panel dieses Subwerkzeugs zurück. Das Panel sollte von einem
      * Kontextwerkzeug eingebettet werden.
-     *
+     * 
      * @ensure result != null
      */
     public JPanel getUIPanel()
@@ -69,7 +69,7 @@ public class DatumAuswaehlWerkzeug extends ObservableSubwerkzeug
 
     /**
      * Gibt das im Werkzeug ausgewählte Datum zurück.
-     *
+     * 
      * @ensure result != null
      */
     public Datum getSelektiertesDatum()

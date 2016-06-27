@@ -5,11 +5,11 @@ import java.util.TimeZone;
 
 /**
  * Ein Kalenderdatum, bestehend aus Tag, Monat und Jahr.
- *
+ * 
  * Das Klassenobjekt stellt zwei Hilfsmethoden zur Verfügung, um das heutige
  * Datum zu ermitteln und zu überprüfen, ob drei Ganzzahlen ein gültiges Datum
  * bilden.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -17,15 +17,15 @@ public final class Datum implements Comparable<Datum>
 {
     /*
      * WICHTIGER HINWEIS AN DIE STUDIERENDEN
-     *
+     * 
      * Alle Exemplare der Klasse Datum teilen sich ein veränderliches Calender-Objekt.
      * Dieses Vorgehen ist extrem untypisch für Fachwerte.
      * Also nehmt diese Klasse bitte nicht als Musterbeispiel für Fachwerte!
-     * Orientiert euch lieber an den Klassen Uhrzeit oder Geldbetrag.
-     *
+     * Orientiert euch lieber an den Klassen Uhrzeit oder Geldbetrag. 
+     * 
      * Die Klassen java.util.Date und java.util.Calendar sind so schrecklich,
      * dass sie in Java 8 durch das Paket java.time abgelöst wurden:
-     * http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html
+     * http://www.oracle.com/technetwork/articles/java/jf14-date-time-2125367.html 
      */
     private static final Calendar kalender = Calendar.getInstance();
     private static final long MILLISEKUNDEN_PRO_TAG = 24L * 60 * 60 * 1000;
@@ -43,13 +43,13 @@ public final class Datum implements Comparable<Datum>
 
     /**
      * Wählt ein Datum aus (tag, monat, jahr).
-     *
+     * 
      * @param tag Der Tag im Monat (1..31)
      * @param monat Der Monat im Jahr (1..12)
      * @param jahr Das Jahr
-     *
+     * 
      * @require istGueltig(tag, monat, jahr)
-     *
+     * 
      * @ensure getTag() == tag
      * @ensure getMonat() == monat
      * @ensure getJahr() == jahr
@@ -93,11 +93,11 @@ public final class Datum implements Comparable<Datum>
 
     /**
      * Prüft, ob das durch Tag, Monat und Jahr angegebene Datum gültig ist.
-     *
+     * 
      * @param tag Der Tag im Monat (1..31).
      * @param monat Der Monat im Jahr (1..12).
      * @param jahr Das Jahr.
-     *
+     * 
      * @return true wenn drei übergebene Zahlen ein gültiges Datum ergeben,
      *         ansonsten false.
      */
@@ -126,9 +126,9 @@ public final class Datum implements Comparable<Datum>
     /**
      * Addiert auf dieses Datum eine übergebene Anzahl von Tage und gibt das
      * Ergebnis als neues Datum zurück.
-     *
+     * 
      * @param tage Die zu addierenden Tage
-     *
+     * 
      * @return den Tag, der um die angegebene Anzahl Tage nach diesem Tag liegt.
      */
     public Datum plus(int tage)
@@ -138,7 +138,7 @@ public final class Datum implements Comparable<Datum>
             kalender.clear();
             kalender.set(_jahr, _monat - 1, _tag);
             kalender.add(Calendar.DAY_OF_MONTH, tage);
-
+            
             return aktuellesDatumDesKalenders();
         }
     }
@@ -146,9 +146,9 @@ public final class Datum implements Comparable<Datum>
     /**
      * Subtrahiert von diesem Datum eine übergebene Anzahl an Tagen und gibt das
      * Ergebnis als neues Datum zurück.
-     *
+     * 
      * @param tage Die abzuziehenden Tage
-     *
+     * 
      * @return den Tag, der um die angegebene Anzahl Tage vor diesem Tag liegt.
      */
     public Datum minus(int tage)
@@ -158,7 +158,7 @@ public final class Datum implements Comparable<Datum>
 
     /**
      * Gibt den Tag vor diesem Tag zurück.
-     *
+     * 
      * @return den Tag vor diesem Tag.
      */
     public Datum vorherigerTag()
@@ -168,7 +168,7 @@ public final class Datum implements Comparable<Datum>
 
     /**
      * Gibt den Tag nach diesem Tag zurück.
-     *
+     * 
      * @return den Tag nach diesem Tag.
      */
     public Datum naechsterTag()
@@ -179,9 +179,9 @@ public final class Datum implements Comparable<Datum>
     /**
      * Berechnet, wie viele Tage seit dem angegebenen Datum bis zu diesem Datum
      * vergangen sind.
-     *
+     * 
      * @param start das Startdatum des Zeitraums.
-     *
+     * 
      * @require start != null
      */
     public int tageSeit(Datum start)
@@ -190,7 +190,7 @@ public final class Datum implements Comparable<Datum>
 
         long millisekunden = this.inMillisekunden() - start.inMillisekunden();
         long tage = millisekunden / MILLISEKUNDEN_PRO_TAG;
-
+        
         return (int) tage;
     }
 
@@ -200,7 +200,7 @@ public final class Datum implements Comparable<Datum>
         {
             kalender.clear();
             kalender.set(_jahr, _monat - 1, _tag);
-
+            
             return kalender.getTimeInMillis();
         }
     }

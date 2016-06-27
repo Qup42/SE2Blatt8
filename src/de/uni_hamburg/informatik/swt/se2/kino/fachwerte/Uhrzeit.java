@@ -2,24 +2,24 @@ package de.uni_hamburg.informatik.swt.se2.kino.fachwerte;
 
 /**
  * Eine Uhrzeit, angegeben in Stunden und Minuten.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
 public final class Uhrzeit implements Comparable<Uhrzeit>
 {
     private static final int MINUTEN_PRO_TAG = 24 * 60;
-
+    
     private final int _stunden;
     private final int _minuten;
-
+    
     /**
      * Wählt eine Uhrzeit aus.
-     *
+     * 
      * @param stunden der Stundenanteil der Uhrzeit.
      * @param minuten der Minutenanteil der Uhrzeit.
      * @require istGueltig(stunden, minuten)
-     *
+     * 
      * @ensure getStunden() == stunden
      * @ensure getMinuten() == minuten
      */
@@ -46,7 +46,7 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
 
     /**
      * Gibt den Stunden-Anteil dieser Uhrzeit zurück.
-     *
+     * 
      * @ensure (result >= 0) && (result < 24)
      */
     public int getStunden()
@@ -56,7 +56,7 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
 
     /**
      * Gibt den Minuten-Anteil dieser Uhrzeit zurück.
-     *
+     * 
      * @ensure (result >= 0) && (result < 60)
      */
     public int getMinuten()
@@ -69,9 +69,9 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
      * Uhrzeit in Minuten. Wenn die Startzeit später als diese Uhrzeit ist, wird
      * angenommen, dass der Zeitraum über Mitternacht geht. Wenn die Startzeit
      * gleich dieser Uhrzeit ist, wird Null zurückgegeben.
-     *
+     * 
      * @param start die Startzeit.
-     *
+     * 
      * @require start != null
      * @ensure result >= 0
      */
@@ -91,7 +91,7 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
     {
         return _stunden * 60 + _minuten;
     }
-
+    
     @Override
     public int compareTo(Uhrzeit u)
     {
@@ -107,7 +107,7 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
     {
         return (o instanceof Uhrzeit) && equals((Uhrzeit)o);
     }
-
+    
     private boolean equals(Uhrzeit andereUhrzeit)
     {
         return (_stunden == andereUhrzeit._stunden) && (_minuten == andereUhrzeit._minuten);
@@ -127,7 +127,7 @@ public final class Uhrzeit implements Comparable<Uhrzeit>
 
     /**
      * Gibt diese Uhrzeit formatiert zurück in der Schreibweise Stunden:Minuten.
-     *
+     * 
      * @ensure result != null
      */
     public String getFormatiertenString()

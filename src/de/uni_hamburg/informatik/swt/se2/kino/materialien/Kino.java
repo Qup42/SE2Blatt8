@@ -9,7 +9,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Datum;
 
 /**
  * Ein Kino mit mehreren Kinosälen, in denen Vorstellungen laufen koennen.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -22,12 +22,12 @@ public class Kino
 
     /**
      * Initialisiert ein Kino.
-     *
+     * 
      * @param saele
      *            die Kinosäle des Kinos.
      * @param vorstellungen
      *            die Vorstellungen, die in dem Kino laufen.
-     *
+     * 
      * @require saele != null
      * @require vorstellungen != null
      * @require saele enthaelt keine Nullpointer
@@ -67,7 +67,7 @@ public class Kino
 
     /**
      * Prüft, ob der angegebene Kinosaal zu diesem Kino gehört.
-     *
+     * 
      * @param kinosaal
      *            der Kinosaal.
      */
@@ -78,7 +78,7 @@ public class Kino
 
     /**
      * Gibt die Kinosäle dieses Kinos zurück.
-     *
+     * 
      * @ensure result != null
      */
     public List<Kinosaal> getKinosaele()
@@ -88,10 +88,10 @@ public class Kino
 
     /**
      * Gibt den Tagesplan fuer das angegebene Datum zurück.
-     *
+     * 
      * @param tag
      *            das Datum.
-     *
+     * 
      * @require tag != null
      * @ensure result != null
      */

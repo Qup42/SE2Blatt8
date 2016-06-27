@@ -9,7 +9,7 @@ import de.uni_hamburg.informatik.swt.se2.kino.fachwerte.Datum;
 /**
  * Ein Tagesplan verzeichnet alle Vorstellungen, die in dem Kino an einem
  * bestimmten Tag laufen.
- *
+ * 
  * @author SE2-Team
  * @version SoSe 2016
  */
@@ -37,10 +37,10 @@ public class Tagesplan
 
     /**
      * Initialisiert einen neuen, leeren Tagesplan.
-     *
+     * 
      * @param tag
      *            der Tag.
-     *
+     * 
      * @require tag != null
      */
     public Tagesplan(Datum tag)
@@ -53,7 +53,7 @@ public class Tagesplan
 
     /**
      * Gibt das Datum zurück, für das dieser Tagesplan gilt.
-     *
+     * 
      * @ensure result != null
      */
     public Datum getDatum()
@@ -63,10 +63,10 @@ public class Tagesplan
 
     /**
      * Fügt diesem Tagesplan eine Vorstellung hinzu.
-     *
+     * 
      * @param v
      *            die Vorstellung.
-     *
+     * 
      * @require v != null
      * @require die Vorstellung laeuft an dem Tag dieses Tagesplans
      */
@@ -81,7 +81,7 @@ public class Tagesplan
     /**
      * Gibt alle Vorstellungen des Tages zurück. Die Vorstellungen werden
      * sortiert nach ihrer Anfangszeit zurückgegeben.
-     *
+     * 
      * @ensure result != null
      */
     public List<Vorstellung> getVorstellungen()
