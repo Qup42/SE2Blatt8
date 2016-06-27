@@ -2,13 +2,15 @@ package de.uni_hamburg.informatik.swt.se2.kino.werkzeuge.bezahlung;
 
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class BezahlWerkzeug
 {
 
-    public static void main(String[] args)
+   /* public static void main(String[] args)
     {
         // TODO: Nur zum Debuggen? -> Entfernen
         BezahlWerkzeug a = new BezahlWerkzeug();
@@ -16,10 +18,12 @@ public class BezahlWerkzeug
             .println(a.berechne(21000, "König der Löwen", "26.06.2016", 42));
         System.out
             .println(a.berechne(1500, "König der Löwen", "26.06.2016", 3));
-    }
+    }*/
+	
 
     private BezahlWerkzeugUI _ui;
     private boolean erfolgreich;
+    private GeldFormatierer _geld;
 
     public BezahlWerkzeug()
     {
@@ -48,6 +52,8 @@ public class BezahlWerkzeug
                         .dispose();
                 }
             });
+        
+        _ui.getGegebenTextField().setBackground(Color.red);
     }
 
     public boolean berechne(final int preis, String vorstellung, String datum,
@@ -55,7 +61,7 @@ public class BezahlWerkzeug
     {
         setzeInfo(vorstellung, datum, plaetze);
         setzePreis(preis);
-        setzeRueckbetrag(-preis);
+        setzeRueckbetrag(0);
 
         // In Variable speichern, damit dieser später wieder entfernt werden kann
         // Für spätere Aufrufe notwendig, ansonsten aktualisiert der als erstes hinzgefügte
@@ -66,18 +72,27 @@ public class BezahlWerkzeug
             {
                 try
                 {
+                	_ui.getGegebenTextField().setBackground(Color.white);
                     int rueckbetrag = getGegeben() - preis;
-                    setzeRueckbetrag(rueckbetrag);
+                    
 
                     if (rueckbetrag >= 0)
-                        _ui.getOkButton()
-                            .setEnabled(true);
+                    {
+                    	setzeRueckbetrag(rueckbetrag);
+                    	_ui.getOkButton()
+                    	.setEnabled(true);                    	
+                    }
                     else
-                        _ui.getOkButton()
-                            .setEnabled(false);
+                    {
+                    	setzeRueckbetrag(0);
+                    	_ui.getOkButton()
+                    	.setEnabled(false);                    	
+                    }
                 }
                 catch (NumberFormatException e)
                 {
+                	setzeRueckbetrag(0);
+                	_ui.getGegebenTextField().setBackground(Color.red);
                     _ui.getOkButton()
                         .setEnabled(false);
                 }
@@ -117,6 +132,7 @@ public class BezahlWerkzeug
         _ui.getGegebenTextField()
             .getDocument()
             .removeDocumentListener(a);
+        
         return erfolgreich;
     }
 
@@ -135,9 +151,12 @@ public class BezahlWerkzeug
 
     private void setzeRueckbetrag(int eurocent)
     {
-        _ui.getRueckbetragLabel()
-            .setText(String.valueOf(eurocent));
+//        _ui.getRueckbetragLabel()
+//            .setText(String.valueOf(eurocent));
+    	_ui.getRueckbetragLabel().setText((new GeldFormatierer(eurocent).toString()));
+    	_ui.getDialog().pack();
     }
+
 
     private int getGegeben() throws NumberFormatException
     {
